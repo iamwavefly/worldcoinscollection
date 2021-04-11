@@ -1,0 +1,28 @@
+.sponsors_container{
+  width: 85%;
+  height: 8rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.sponsors_container > div{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.sponsors_container > div:hover img{
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.sponsors_container > div > img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(90%);
+  opacity: .8;
+  transition: all .4s ease;
+}

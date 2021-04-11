@@ -1,0 +1,126 @@
+.testimonies_bg{
+  background-color: rgba(182, 74, 89, 0.065);
+  height: 45rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonies_container{
+  width: 85%;
+  height: 100%;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.testimonies_container > .header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 40px auto 0 auto;
+  text-align: center;
+}
+.testimonies_container > .header p{
+  width: 80%;
+  margin: 5px auto 0 auto;
+  text-align: center;
+}
+.carousel{
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+}
+.slide{
+  position: relative;
+  width: 32% !important;
+  height: 26rem !important;
+  display: flex;
+  grid-template-rows: 40% 1fr;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  margin: 0 8px;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(90, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: visible;
+  opacity: 1;
+  filter: blur(0);
+  transition: box-shadow 1s ease, opacity 1s ease, filter 1s ease; 
+}
+.slide:not(.is-selected){
+  opacity: 0.9;
+  filter: blur(.5px);
+  box-shadow: unset;
+}
+.slide .img_wrapper{
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #eee;
+  margin: 0 auto;
+}
+.slide .img_wrapper::before{
+  content: '';
+  background-color: #eee;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  z-index: -1;
+}
+.slide .img_wrapper img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: top;
+  padding: 2px;
+  border-radius: 50%;
+}
+.carousel_content{
+  margin-top: 10px;
+}
+.carousel_content p{
+  margin-top: 10px;
+}
+.carousel_content h2{
+  font-size: 20px;
+}
+.carousel_content h3{
+  color: #e8383b;
+  font-weight: 400;
+}
+.flickity-viewport{
+  height: 100% !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
+}

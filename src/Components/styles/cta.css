@@ -1,0 +1,51 @@
+.cta-bg{
+  background-color: rgba(182, 74, 89, 0.065);
+  width: 100%;
+  height: 35rem;
+  margin-top: 14rem;
+}
+.cta_container{
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+.cta_container > .left_column{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta_container > .left_column img:first-child{
+  position: absolute;
+  right: -5%;
+  bottom: 10%;
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+.cta_container > .left_column img:last-child{
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+}
+.cta_container > .right_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta_container > .right_column h2{
+  width: 80%;
+}
+.cta_container > .right_column p{
+  margin-top: 10px;
+  width: 75%;
+}
+.cta_container > .right_column a{
+  margin-top: 35px;
+}

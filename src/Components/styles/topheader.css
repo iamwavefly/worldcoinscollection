@@ -1,0 +1,23 @@
+.topheader_container{
+  width: 100%;
+  height: 2.5rem;
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  animation: bgAnimate 10s ease 0s infinite;
+}
+@keyframes bgAnimate{
+  40%{
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  }
+  60%{
+    background-image: linear-gradient(-20deg, #d44d5f 0%, #da8a44 100%);
+  }
+  100%{
+    background-image: linear-gradient(-20deg, #da8a44 0%, #d44d5f 100%);
+  }
+}
