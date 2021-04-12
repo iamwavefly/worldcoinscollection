@@ -35,6 +35,7 @@
 .right_section{
   position: relative;
 }
+/* -----------------placeholder images---------------- */
 .pat1{
   position: absolute;
   width: 150px;
@@ -51,6 +52,43 @@
   top: 75%;
   object-fit: unset;
 }
+.review_box{
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: 0;
+  bottom: 30%;
+  object-fit: unset;
+  z-index: 9999;
+}
+.review_box2{
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: -5%;
+  top: 10%;
+  object-fit: unset;
+  z-index: 9999;
+}
+.review_box3{
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -10%;
+  top: 5%;
+  object-fit: unset;
+  z-index: 9999;
+}
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover;
+  z-index: -1;
+}
+/* -----------------------main banner--------------------- */
 .right_section > .banner{
   position: relative;
   margin-left: 5px;

@@ -47,7 +47,7 @@ export default class FeatureSection extends Component {
     return (
       <div className="feature_container">
         <div className="feature_header">
-          <motion.h2
+          <motion.h3
             initial="hidden"
             animate="visible"
             variants={this.variants}
@@ -56,6 +56,20 @@ export default class FeatureSection extends Component {
               ease: 'easeInOut',
               type: 'spring',
               delay: 0.2,
+            }}
+            className="sub_header"
+          >
+            Realtime Data Update
+          </motion.h3>
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            variants={this.variants}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 0.4,
             }}
             id="elem"
           >
@@ -89,8 +103,61 @@ export default class FeatureSection extends Component {
           }}
           className="feature_img"
         >
-          <img src={pat} alt="" />
-          <img src={img} alt="dashboard img" />
+          <motion.img
+            variants={this.variants}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 1,
+            }}
+            src={pat}
+            alt=""
+          />
+          <motion.img
+            variants={this.variants}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 1,
+            }}
+            src={img}
+            alt="dashboard img"
+            className="dashboard"
+          />
+          <motion.img
+            variants={this.variants}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 0.5,
+            }}
+            src={img}
+            alt="dashboard img"
+            className="dashboard2"
+          />
+          <motion.img
+            variants={this.variants}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 0.1,
+            }}
+            src={img}
+            alt="dashboard img"
+            className="dashboard3"
+          />
         </motion.div>
       </div>
     );

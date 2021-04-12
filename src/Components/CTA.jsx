@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
+import calcImg from '../images/icons/calc.svg';
+import calcImg2 from '../images/icons/calc2.svg';
 
 import './styles/cta.css';
 import arrDir from '../images/icons/arrow_dir.svg';
 import pat from '../images/icons/pat2.svg';
-import banner from '../images/banner.png';
+import banner from '../images/cta_img.png';
 
 export default class CTA extends Component {
   variants = {
@@ -21,22 +23,21 @@ export default class CTA extends Component {
     return (
       <div className="cta-bg">
         <div className="cta_container">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={this.variants}
-            transition={{
-              duration: 1,
-              ease: 'easeInOut',
-              type: 'spring',
-              delay: 0.2,
-            }}
-            className="left_column"
-          >
-            <img src={pat} alt="" />
-            <img src={banner} alt="" />
-          </motion.div>
-          <div className="right_column">
+          <div className="left_column">
+            <motion.h3
+              initial="hidden"
+              animate="visible"
+              variants={this.variants}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 0.2,
+              }}
+              className="sub_header"
+            >
+              Transparent Transaction
+            </motion.h3>
             <motion.h2
               initial="hidden"
               animate="visible"
@@ -99,6 +100,49 @@ export default class CTA extends Component {
               </span>
             </motion.div>
           </div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={this.variants}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 0.2,
+            }}
+            className="right_column"
+          >
+            <img src={pat} alt="" />
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={this.variants}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 0.8,
+              }}
+              src={calcImg}
+              alt=""
+              className="calc_img"
+            />
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={this.variants}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 1,
+              }}
+              src={calcImg2}
+              alt=""
+              className="calc_img2"
+            />
+            <img src={banner} alt="" />
+          </motion.div>
         </div>
       </div>
     );

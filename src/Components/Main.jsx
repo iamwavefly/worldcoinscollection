@@ -2,9 +2,14 @@
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
 import OptinsForm from './OptinsForm';
+// Images
 import pat1 from '../images/icons/pat1.svg';
 import pat2 from '../images/icons/pat2.svg';
 import arrDir from '../images/icons/arrow_dir.svg';
+import review from '../images/icons/review.svg';
+import review2 from '../images/icons/review2.svg';
+import review3 from '../images/icons/review3.svg';
+import background from '../images/icons/bg.svg';
 import BanImg from '../images/banner.png';
 import './styles/main.css';
 import SleakSocialLinks from './SleakSocialLinks';
@@ -27,10 +32,12 @@ export default class Main extends Component {
   };
   imgVariants = {
     hidden: {
+      y: 100,
       opacity: 0,
     },
     visible: {
       opacity: 1,
+      y: 0,
     },
   };
   headerVariants = {
@@ -143,6 +150,49 @@ export default class Main extends Component {
               alt="pattern"
               className="pat2"
             />
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={this.imgVariants}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 1,
+              }}
+              src={review}
+              alt="review"
+              className="review_box"
+            />
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={this.imgVariants}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 3,
+              }}
+              src={review2}
+              alt="review"
+              className="review_box2"
+            />
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={this.imgVariants}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 4,
+              }}
+              src={review3}
+              alt="review"
+              className="review_box3"
+            />
+            <img src={background} alt="backgound" class="background" />
             <div className="banner">
               <img src={BanImg} alt="" />
             </div>

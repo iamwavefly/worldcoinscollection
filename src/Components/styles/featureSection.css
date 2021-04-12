@@ -35,10 +35,35 @@
   width: 100px;
   object-fit: contain;
 }
-.feature_container > .feature_img > img:last-child{
+.feature_container > .feature_img > .dashboard{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: unset;
   border-radius: 20px;
   box-shadow: 0 10px 10px rgba(51, 51, 51, 0.1);
+  z-index: 3;
+}
+.feature_container > .feature_img > .dashboard2{
+  position: absolute;
+  top: -2%;
+  left: 1%;
+  width: 98%;
+  height: 98%;
+  object-fit: unset;
+  border-radius: 20px;
+  z-index: 2;
+  transform: translateX(-50%);
+  filter: grayscale(10%);
+}
+.feature_container > .feature_img > .dashboard3{
+  position: absolute;
+  top: -4%;
+  left: 2%;
+  width: 95%;
+  height: 95%;
+  object-fit: unset;
+  border-radius: 20px;
+  z-index: 1;
+  transform: translateX(-50%);
+  filter: grayscale(10%);
 }

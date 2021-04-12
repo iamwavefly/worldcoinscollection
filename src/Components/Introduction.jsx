@@ -32,7 +32,7 @@ export default class Introduction extends Component {
     return (
       <div className="introd_container">
         <div className="introd_header">
-          <motion.h2
+          <motion.h3
             initial="hidden"
             animate="visible"
             variants={this.headerVariants}
@@ -41,6 +41,20 @@ export default class Introduction extends Component {
               ease: 'easeInOut',
               type: 'spring',
               delay: 0.1,
+            }}
+            className="sub_header"
+          >
+            Introduction
+          </motion.h3>
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            variants={this.headerVariants}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 0.4,
             }}
           >
             Brief Information About Us

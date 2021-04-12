@@ -9,6 +9,7 @@ import Main from './Main';
 import Sponsors from './Sponsors';
 import Testimonies from './Testimonies';
 import Footer from './Footer';
+import GoogleMapContainer from './googleApis/GoogleMap';
 
 export default class App extends Component {
   render() {
@@ -24,6 +25,7 @@ export default class App extends Component {
         <CTA />
         <Testimonies />
         <ContactSection />
+        <GoogleMapContainer />
         <Footer />
       </div>
     );

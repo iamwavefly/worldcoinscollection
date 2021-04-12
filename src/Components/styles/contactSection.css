@@ -4,7 +4,7 @@
   height: 30rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+  grid-gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -32,15 +32,14 @@
 }
 .contact_container .contact_form form{
   position: relative;
-  top: 2rem;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(167, 14, 14, 0.1);
+  box-shadow: 0 20px 10px rgba(134, 39, 39, 0.1);
   width: 90%;
   height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(3, 50px) 1fr 40px;
-  grid-gap: 10px;
+  grid-gap: 5px;
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
@@ -55,7 +54,8 @@
   width: 100% !important;
   height: 100% !important;
   outline: none;
-  border: 1px solid #f1f1f1;
+  border: none;
+  background-color: #faf8f8;
   color: #555;
   padding: 0 20px;
   border-radius: 5px;
@@ -70,7 +70,8 @@
   width: 100% !important;
   height: 100% !important;
   outline: none;
-  border: 1px solid #f1f1f1;
+  border: none;
+  background-color: #faf8f8;
   resize: vertical;
   padding: 15px 20px;
   color: #555;

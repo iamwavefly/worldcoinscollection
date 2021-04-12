@@ -19,7 +19,7 @@ export default class ContactSection extends Component {
     return (
       <div className="contact_container">
         <div className="contact_info">
-          <motion.h2
+          <motion.h3
             initial="hidden"
             animate="visible"
             variants={this.variants}
@@ -29,8 +29,22 @@ export default class ContactSection extends Component {
               type: 'spring',
               delay: 0.2,
             }}
+            className="sub_header"
           >
-            Get In Touch
+            Our Contact
+          </motion.h3>
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            variants={this.variants}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+              delay: 0.4,
+            }}
+          >
+            Get In Touch If You Have Any Complaint
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -81,24 +95,6 @@ export default class ContactSection extends Component {
             >
               <a href="tel:+41 873 643 21">
                 <FiPhoneCall className="icon" /> +41 873 643 21
-              </a>
-            </motion.li>
-            <motion.li
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.2 }}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 1,
-              }}
-            >
-              <a href="#">
-                <FiMapPin className="icon" /> second floor, marycane road, new
-                york, united kingdom.
               </a>
             </motion.li>
           </ul>

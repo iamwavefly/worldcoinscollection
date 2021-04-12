@@ -1,6 +1,6 @@
 .testimonies_bg{
   background-color: rgba(182, 74, 89, 0.065);
-  height: 45rem;
+  height: 40rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,9 +10,8 @@
   width: 85%;
   height: 100%;
   margin: 2rem auto 0 auto;
-  display: grid;
-  grid-template-rows: 30% 1fr;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -38,40 +37,37 @@
   justify-content: center;
   align-items: center;
   perspective: 600px;
+  margin-top: 40px;
 }
 .slide{
   position: relative;
   width: 32% !important;
-  height: 26rem !important;
-  display: flex;
-  grid-template-rows: 40% 1fr;
+  height: 22rem !important;
+  padding: 20px 0;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 30px;
   text-align: center;
-  margin: 0 8px;
-  border-radius: 20px;
-  box-shadow: 0 10px 10px rgba(90, 0, 0, 0.1);
+  /* margin: auto 2px; */
+  border-radius: 10px;
   background-color: #fff;
-  overflow: visible;
-  opacity: 1;
-  filter: blur(0);
-  transition: box-shadow 1s ease, opacity 1s ease, filter 1s ease; 
+  transform: scale(1);
+  transition: transform 1s ease; 
+  box-shadow: 0 10px 10px rgba(82, 37, 37, 0.1);
 }
 .slide:not(.is-selected){
-  opacity: 0.9;
-  filter: blur(.5px);
-  box-shadow: unset;
+  transform: scale(0.9);
 }
 .slide .img_wrapper{
+  margin: 0 auto;
   position: relative;
-  width: 8rem;
-  height: 8rem;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #eee;
-  margin: 0 auto;
+  border: 2px solid #fff;
 }
 .slide .img_wrapper::before{
   content: '';
@@ -80,7 +76,7 @@
   height: 8rem;
   border-radius: 50%;
   position: absolute;
-  top: -10%;
+  top: 10%;
   z-index: -1;
 }
 .slide .img_wrapper img{
@@ -91,18 +87,24 @@
   padding: 2px;
   border-radius: 50%;
 }
+/* rating star icon start */
+.rating{
+  width: 35%;
+  object-fit: unset;
+}
 .carousel_content{
+  /* margin-top: 20px; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+.review_user h3{
+  font-weight: 600;
   margin-top: 10px;
-}
-.carousel_content p{
-  margin-top: 10px;
-}
-.carousel_content h2{
-  font-size: 20px;
-}
-.carousel_content h3{
-  color: #e8383b;
-  font-weight: 400;
 }
 .flickity-viewport{
   height: 100% !important;
