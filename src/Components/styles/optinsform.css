@@ -1,6 +1,6 @@
 .optins_form{
   position: relative;
-  width: 130%;
+  width: 120%;
   border: 1px solid #eee;
   height: 5rem;
   border-radius: 10px;
@@ -11,7 +11,7 @@
 }
 .optins_form form{
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 22%;
+  grid-template-columns: repeat(2, minmax(100px, 1fr)) 25%;
   justify-content: center;
   align-items: center;
   width: 100%;

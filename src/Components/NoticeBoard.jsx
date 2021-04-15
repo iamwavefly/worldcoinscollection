@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
+
 import axios from 'axios';
 import './styles/noticeBoard.css';
 
@@ -25,14 +27,16 @@ export default class NoticeBoard extends Component {
   }
   render() {
     return (
-      this.state.userLocation && (
+      // this.state.userLocation && (
+      <Fade when={this.state.userLocation ? true : false} dalay={2000}>
         <div className="notice_board_container">
           <p className="notice">
             <span>Notice</span> We are now setting up a new pickup station at{' '}
             {this.state.userLocation.city}
           </p>
         </div>
-      )
+      </Fade>
+      // )
     );
   }
 }

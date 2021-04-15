@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
+import Fade from 'react-reveal/Fade';
 
 import Flickity from 'react-flickity-component';
 import './styles/flickity.min.css';
@@ -14,23 +14,12 @@ import rating from '../images/icons/rating.svg';
 import rating2 from '../images/icons/rating2.svg';
 import rating3 from '../images/icons/rating3.svg';
 import rating4 from '../images/icons/rating4.svg';
-import rating5 from '../images/icons/rating5.svg';
 
 export default class Testimonies extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-  variants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
   flickityOptions = {
     initialIndex: 2,
     freeScroll: true,
@@ -51,47 +40,18 @@ export default class Testimonies extends Component {
       <div className="testimonies_bg">
         <div className="testimonies_container">
           <div className="header">
-            <motion.h3
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.2,
-              }}
-              className="sub_header"
-            >
-              What People Says About Us
-            </motion.h3>
-            <motion.h2
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.4,
-              }}
-            >
-              Review From Our Esteem Clients
-            </motion.h2>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.4,
-              }}
-            >
-              We are not just the best old coins trading platform in the World
-              but we are most reliable.
-            </motion.p>
+            <Fade up>
+              <h3 className="sub_header">What People Says About Us</h3>
+            </Fade>
+            <Fade up delay={600}>
+              <h2>Review From Our Esteem Clients</h2>
+            </Fade>
+            <Fade up delay={700}>
+              <p>
+                We are not just the best old coins trading platform in the World
+                but we are most reliable.
+              </p>
+            </Fade>
           </div>
           <Flickity
             className={'carousel'} // default ''

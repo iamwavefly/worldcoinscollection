@@ -1,15 +1,15 @@
 .testimonies_bg{
-  background-color: rgba(182, 74, 89, 0.065);
+  /* background-color: rgba(182, 74, 89, 0.065); */
   height: 40rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem auto 0 auto;
 }
 .testimonies_container{
   width: 85%;
   height: 100%;
-  margin: 2rem auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

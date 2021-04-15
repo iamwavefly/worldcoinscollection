@@ -11,6 +11,8 @@ import Testimonies from './Testimonies';
 import Footer from './Footer';
 import GoogleMapContainer from './googleApis/GoogleMap';
 
+import './styles/Mobile/index.css';
+
 export default class App extends Component {
   render() {
     return (

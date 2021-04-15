@@ -1,37 +1,13 @@
 import React, { Component } from 'react';
-import { FiPhoneCall } from 'react-icons/fi';
+import { FaLinkedinIn, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
-import Logo from '../images/logo.svg';
+import Logo from '../images/logo-light.svg';
 import './styles/footer.css';
 
 export default class Footer extends Component {
   render() {
     return (
       <footer className="footer_container">
-        <div className="columns">
-          <div className="column1">
-            <h3>WorldCC</h3>
-            <p>
-              By 1954 the Asia Old Stamp Company had grown to an operation of
-              sufficient scope to employ 60 people, with fully 99% of the
-              company's business
-            </p>
-          </div>
-          <div className="column2">
-            <h3>Contact Us</h3>
-            <p>
-              By 1954 the Asia Old Stamp Company had grown to an operation of
-              sufficient scope to employ 60 people
-            </p>
-          </div>
-          <div className="column3">
-            <h3>About Us</h3>
-            <p>
-              By 1954 the Asia Old Stamp Company had grown to an operation of
-              sufficient scope to employ 60 people, with fully 99% of the
-            </p>
-          </div>
-        </div>
         <nav className="main_navbar footer_navbar">
           <ul className="left_nav">
             <li className="logo">
@@ -52,9 +28,7 @@ export default class Footer extends Component {
           </ul>
           <ul className="right_nav">
             <li>
-              <a href="tel:+23445458573">
-                <FiPhoneCall className="phone-icon" /> +23445458573
-              </a>
+              <a href="#">Company</a>
             </li>
             <li>
               <a href="#">Signin</a>
@@ -64,6 +38,19 @@ export default class Footer extends Component {
             </li>
           </ul>
         </nav>
+        <div className="footer_social_icon">
+          <div className="">
+            <FaLinkedinIn />
+          </div>
+
+          <div className="">
+            <FaFacebookF />
+          </div>
+
+          <div className="">
+            <FaTwitter />
+          </div>
+        </div>
         <div className="copyright">
           <span>
             &copy; {new Date().getFullYear()} WorldCC, All Rights Reserved.

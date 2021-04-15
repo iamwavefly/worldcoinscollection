@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
+import Fade from 'react-reveal/Fade';
 import calcImg from '../images/icons/calc.svg';
 import calcImg2 from '../images/icons/calc2.svg';
 
@@ -9,140 +9,52 @@ import pat from '../images/icons/pat2.svg';
 import banner from '../images/cta_img.png';
 
 export default class CTA extends Component {
-  variants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
   render() {
     return (
       <div className="cta-bg">
         <div className="cta_container">
           <div className="left_column">
-            <motion.h3
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.2,
-              }}
-              className="sub_header"
-            >
-              Transparent Transaction
-            </motion.h3>
-            <motion.h2
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.4,
-              }}
-            >
-              Know The Value Of Your Old Coins/Notes Now
-            </motion.h2>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.6,
-              }}
-            >
-              We have make it super simple for you to get started, just snap
-              your old coins/note to us or upload it in deal section if your
-              account is already approved, and we will you get the worth
-              immediately.
-            </motion.p>
-            <motion.a
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.8,
-              }}
-              href="#"
-            >
-              Ok, let start <span>&rarr;</span>
-            </motion.a>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 1,
-              }}
-              className="optins_intru"
-            >
+            <Fade up>
+              <h3 className="sub_header">Transparent Transaction</h3>
+            </Fade>
+            <Fade up delay={600}>
+              <h2>Know The Value Of Your Old Coins/Notes Now</h2>
+            </Fade>
+            <Fade up delay={700}>
+              <p>
+                We have make it super simple for you to get started, just snap
+                your old coins/note to us or upload it in deal section if your
+                account is already approved, and we will you get the worth
+                immediately.
+              </p>
+            </Fade>
+            <Fade up delay={800}>
+              <a href="#">
+                Ok, let start <span>&rarr;</span>
+              </a>
+            </Fade>
+            <div className="optins_intru">
               <img src={arrDir} alt="" />
-              <span>
-                click on this button to start trading your old coin/notes or{' '}
-                <a href="#">contact us</a> now.
-              </span>
-            </motion.div>
+              <Fade up delay={900}>
+                <span>
+                  click on this button to start trading your old coin/notes or{' '}
+                  <a href="#">contact us</a> now.
+                </span>
+              </Fade>
+            </div>
           </div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={this.variants}
-            transition={{
-              duration: 1,
-              ease: 'easeInOut',
-              type: 'spring',
-              delay: 0.2,
-            }}
-            className="right_column"
-          >
+          <div className="right_column">
             <img src={pat} alt="" />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.8,
-              }}
-              src={calcImg}
-              alt=""
-              className="calc_img"
-            />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 1,
-              }}
-              src={calcImg2}
-              alt=""
-              className="calc_img2"
-            />
-            <img src={banner} alt="" />
-          </motion.div>
+            <Fade up delay={1000}>
+              <img src={calcImg} alt="" className="calc_img" />
+            </Fade>
+            <Fade up delay={2000}>
+              <img src={calcImg2} alt="" className="calc_img2" />
+            </Fade>
+            <Fade right>
+              <img src={banner} alt="" />
+            </Fade>
+          </div>
         </div>
       </div>
     );

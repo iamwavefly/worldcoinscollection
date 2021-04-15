@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
+import Fade from 'react-reveal/Fade';
 import OptinsForm from './OptinsForm';
 // Images
 import pat1 from '../images/icons/pat1.svg';
@@ -18,185 +18,126 @@ import NoticeBoard from './NoticeBoard';
 export default class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      offsetY: 0,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
   }
-  bannerVariants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-  imgVariants = {
-    hidden: {
-      y: 100,
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-  headerVariants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-  paragraphVariants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+  handleScroll(event) {
+    let offsetY = window.pageYOffset;
+    this.setState({
+      offsetY: offsetY,
+    });
+  }
   render() {
-    console.log(this.variants);
     return (
       <div className="main_bg">
         <section className="main_container">
           <div className="left_section">
             <SleakSocialLinks />
+            {/* NOTICE BOX */}
             <NoticeBoard />
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={this.headerVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.2 }}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.2,
-              }}
-            >
-              Sell & Buy <span className="light_word">Old Coins</span>, Notes
-              and Antiques <br /> in <mark>Minute</mark>
-            </motion.h1>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={this.paragraphVariants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.5,
-              }}
-            >
-              Transform your Old Coins into money using our quick, secure and
-              free assistance. With Vintage Money Cow.
-            </motion.p>
+            {/* HEADING */}
+            <Fade up>
+              <h1>
+                Sell Your <span className="light_word">Old Coins</span>, Notes
+                Stamps & Antiques in <mark>Minute</mark>
+              </h1>
+            </Fade>
+            {/* PARAGRAPH */}
+            <Fade up duration={1000}>
+              <p>
+                Transform your Old Coins into money using our quick, secure and
+                free assistance. With Vintage Money Cow.
+              </p>
+            </Fade>
             <OptinsForm />
             <div className="optins_intru">
               <img src={arrDir} alt="" />
-              <span>
-                It's easy to get started, just select your entity type and we
-                will email you the necessary steps or you can{' '}
-                <a href="#">contact us</a>
-              </span>
+              <Fade up duration={1000}>
+                <span>
+                  It's easy to get started, just select your entity type and we
+                  will email you the necessary steps or you can{' '}
+                  <a href="#">contact us</a>
+                </span>
+              </Fade>
             </div>
           </div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={this.bannerVariants}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.2 }}
-            transition={{
-              duration: 1.5,
-              ease: 'easeInOut',
-              type: 'spring',
-              delay: 0.5,
-            }}
-            className="right_section"
-          >
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.imgVariants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 1,
-              }}
-              src={pat1}
-              alt="pattern"
-              className="pat1"
-            />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.imgVariants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.8,
-              }}
-              src={pat2}
-              alt="pattern"
-              className="pat2"
-            />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.imgVariants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 1,
-              }}
-              src={review}
-              alt="review"
-              className="review_box"
-            />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.imgVariants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 3,
-              }}
-              src={review2}
-              alt="review"
-              className="review_box2"
-            />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.imgVariants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 4,
-              }}
-              src={review3}
-              alt="review"
-              className="review_box3"
-            />
+          <div className="right_section">
+            <Fade>
+              <img src={pat1} alt="pattern" className="pat1" />
+            </Fade>
+            <Fade>
+              <img src={pat2} alt="pattern" className="pat2" />
+            </Fade>
+            <Fade duration={2000} delay={1000}>
+              <div className="review_box">
+                <img
+                  src={review}
+                  style={{
+                    transform: `translateY(-${this.state.offsetY * 0.1}px)`,
+                    transition: 'all 1s ease',
+                    position: 'absolute',
+                    objectFit: 'contain',
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  alt="review"
+                />
+              </div>
+            </Fade>
+            <Fade duration={2000} delay={2000}>
+              <div className="review_box2">
+                <img
+                  src={review2}
+                  style={{
+                    transform: `translateY(-${this.state.offsetY * 0.1}px)`,
+                    transition: 'all 1s ease',
+                    position: 'absolute',
+                    objectFit: 'contain',
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  alt="review"
+                />
+              </div>
+            </Fade>
+            <Fade duration={2000} delay={3000}>
+              <div className="review_box3">
+                <img
+                  src={review3}
+                  style={{
+                    transform: `translateY(${this.state.offsetY * 0.2}px)`,
+                    transition: 'all 1s ease',
+                    position: 'absolute',
+                    objectFit: 'contain',
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  alt="review"
+                />
+              </div>
+            </Fade>
             <img src={background} alt="backgound" class="background" />
-            <div className="banner">
-              <img src={BanImg} alt="" />
-            </div>
-          </motion.div>
+            <Fade right>
+              <div className="banner">
+                <img
+                  src={BanImg}
+                  alt=""
+                  style={{
+                    transform: `translateY(${this.state.offsetY * 0.1}px)`,
+                    transition: 'all 1s ease',
+                  }}
+                />
+              </div>
+            </Fade>
+          </div>
         </section>
       </div>
     );

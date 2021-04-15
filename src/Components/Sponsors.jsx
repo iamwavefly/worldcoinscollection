@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
+import Fade from 'react-reveal/Fade';
 
 import Sponsor1 from '../images/brand-logo/3.png';
 import Sponsor2 from '../images/brand-logo/4.png';
@@ -26,134 +26,46 @@ export default class Sponsors extends Component {
   render() {
     return (
       <div className="sponsors_container">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.1,
-          }}
-          className="sponsor1"
-        >
-          <img src={Sponsor3} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.2,
-          }}
-          className="sponsor2"
-        >
-          <img src={Sponsor8} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.3,
-          }}
-          className="sponsor3"
-        >
-          <img src={Sponsor1} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.4,
-          }}
-          className="sponsor4"
-        >
-          <img src={Sponsor2} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.5,
-          }}
-          className="sponsor5"
-        >
-          <img src={Sponsor4} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.6,
-          }}
-          className="sponsor6"
-        >
-          <img src={Sponsor5} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.7,
-          }}
-          className="sponsor7"
-        >
-          <img src={Sponsor6} alt="" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={this.variants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.2 }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-            type: 'spring',
-            delay: 0.8,
-          }}
-          className="sponsor8"
-        >
-          <img src={Sponsor7} alt="" />
-        </motion.div>
+        <Fade up>
+          <div className="sponsor1">
+            <img src={Sponsor3} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={100}>
+          <div className="sponsor2">
+            <img src={Sponsor8} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={200}>
+          <div className="sponsor3">
+            <img src={Sponsor1} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={300}>
+          <div className="sponsor4">
+            <img src={Sponsor2} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={400}>
+          <div className="sponsor5">
+            <img src={Sponsor4} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={500}>
+          <div className="sponsor6">
+            <img src={Sponsor5} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={600}>
+          <div className="sponsor7">
+            <img src={Sponsor6} alt="" />
+          </div>
+        </Fade>
+        <Fade up delay={700}>
+          <div className="sponsor8">
+            <img src={Sponsor7} alt="" />
+          </div>
+        </Fade>
       </div>
     );
   }

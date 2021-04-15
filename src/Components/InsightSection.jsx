@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
+import Fade from 'react-reveal/Fade';
 import { FiTrendingUp, FiUserCheck } from 'react-icons/fi';
 
 import './styles/insightSection.css';
@@ -11,155 +11,144 @@ import review from '../images/icons/review4.svg';
 import review2 from '../images/icons/review5.svg';
 
 export default class InsightSection extends Component {
-  variants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      offsetY: 0,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+  handleScroll() {
+    let offsetY = window.pageYOffset;
+    this.setState({
+      offsetY: offsetY,
+    });
+    console.log(this.state.offsetY);
+  }
   render() {
     return (
       <div className="insight_bg">
         <div className="insight_container">
-          <div className="ScrollBall">
-            <img src={globalBall} alt="" srcset="" />
-          </div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={this.variants}
-            transition={{
-              duration: 1,
-              ease: 'easeInOut',
-              type: 'spring',
-              delay: 0.1,
-            }}
-            className="content1"
-          >
-            <img src={pat} alt="" />
-            <img src={img} className="insight_img" alt="insight img" />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 2,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.5,
-              }}
-              src={review}
-              alt="Insight Review"
-              class="insight_review"
-            />
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 2,
-              }}
-              src={review2}
-              alt="Insight Review"
-              class="insight_review2"
-            />
-          </motion.div>
-          <div className="content2">
-            <motion.h3
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.2,
-              }}
-              className="sub_header"
-            >
-              What We Offer
-            </motion.h3>
-            <motion.h2
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.4,
-              }}
-            >
-              Make Money Out Of Your Old Stuffs
-            </motion.h2>
-            <div className="cards">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={this.variants}
-                transition={{
-                  duration: 1,
-                  ease: 'easeInOut',
-                  type: 'spring',
-                  delay: 0.4,
+          <Fade left>
+            <div className="ScrollBall">
+              <img
+                src={globalBall}
+                style={{
+                  transform: `translate(-50%, -50%) rotate(${
+                    this.state.offsetY * 0.1 - 1900
+                  }deg)`,
+                  transition: 'all 1s ease',
                 }}
-                className="card1"
-              >
-                <div className="card_icon">
-                  <FiTrendingUp className="icon" />
-                </div>
-                <div className="card_content">
-                  <h3>Passive Income Stream</h3>
-                  <p>
-                    If you get old coins or old notes, you can turn them to
-                    money.
-                  </p>
-                </div>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={this.variants}
-                transition={{
-                  duration: 1,
-                  ease: 'easeInOut',
-                  type: 'spring',
-                  delay: 0.6,
-                }}
-                className="card2"
-              >
-                <div className="card_icon">
-                  <FiUserCheck className="icon" />
-                </div>
-                <div className="card_content">
-                  <h3>Most Reliable</h3>
-                  <p>
-                    Once you very your profile, you can get paid within 48hours
-                  </p>
-                </div>
-              </motion.div>
+                alt=""
+                srcset=""
+              />
             </div>
-            <motion.a
-              initial="hidden"
-              animate="visible"
-              variants={this.variants}
-              transition={{
-                duration: 1,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.8,
-              }}
-              href="#"
-            >
-              Start Trading <span>&rarr;</span>
-            </motion.a>
+          </Fade>
+          <div className="content1">
+            <Fade up>
+              <img src={pat} alt="" />
+            </Fade>
+            <Fade left>
+              <div className="insight_main_img">
+                <img
+                  src={img}
+                  className="insight_img"
+                  style={{
+                    transform: `translateY(${
+                      this.state.offsetY * 0.1 - 140
+                    }px)`,
+                    transition: 'all 1s ease',
+                  }}
+                  alt="insight img"
+                />
+              </div>
+            </Fade>
+            <Fade delay={1000}>
+              <div className="insight_review">
+                <img
+                  src={review}
+                  style={{
+                    transform: `translateY(${
+                      this.state.offsetY * 0.1 - 140
+                    }px)`,
+                    transition: 'all 1s ease',
+                    position: 'absolute',
+                    objectFit: 'contain',
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  alt="Insight Review"
+                />
+              </div>
+            </Fade>
+
+            <Fade delay={2000}>
+              <div className="insight_review2">
+                <img
+                  src={review2}
+                  style={{
+                    transform: `translateY(-${
+                      this.state.offsetY * 0.1 - 140
+                    }px)`,
+                    transition: 'all 1s ease',
+                    position: 'absolute',
+                    objectFit: 'contain',
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  alt="Insight Review"
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="content2">
+            <Fade up>
+              <h3 className="sub_header">What We Offer</h3>
+            </Fade>
+            <Fade up>
+              <h2>Make Money Out Of Your Old Stuffs</h2>
+            </Fade>
+            <div className="cards">
+              <Fade up>
+                <div className="card1">
+                  <div className="card_icon">
+                    <FiTrendingUp className="icon" />
+                  </div>
+                  <div className="card_content">
+                    <h3>Passive Income Stream</h3>
+                    <p>
+                      If you get old coins or old notes, you can turn them to
+                      money.
+                    </p>
+                  </div>
+                </div>
+              </Fade>
+              <Fade up>
+                <div className="card2">
+                  <div className="card_icon">
+                    <FiUserCheck className="icon" />
+                  </div>
+                  <div className="card_content">
+                    <h3>Most Reliable</h3>
+                    <p>
+                      Once you very your profile, you can get paid within
+                      48hours
+                    </p>
+                  </div>
+                </div>
+              </Fade>
+            </div>
+            <Fade up>
+              <a href="#">
+                Start Trading <span>&rarr;</span>
+              </a>
+            </Fade>
           </div>
         </div>
       </div>
