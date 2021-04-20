@@ -1,7 +1,7 @@
 .insight_bg{
   height: auto;
   margin: 80px auto 0 auto;
-  background-color: rgba(244, 232, 216, 0.4);
+  background-color: rgba(0, 85, 124, 0.050);
   padding-bottom: 20px;
 }
 .insight_container{
@@ -110,8 +110,8 @@
 }
 
 .insight_container > .content2 > .cards .card_icon{
-  background-color: rgba(252, 96, 117, 0.065);
-  border-radius: 20px;
+  background-color: rgba(0, 85, 124,.1);
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   display: flex;
@@ -120,7 +120,7 @@
 }
 .insight_container > .content2 > .cards .icon{
   font-size: 20px;
-  color: #FF763D;
+  color: rgb(0, 85, 124);
   left: 50%;
   top: 50%;
 }

@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 
 import { FiChevronDown, FiPhoneCall } from 'react-icons/fi';
-import Logo from '../images/logo.svg';
+import Logo from '../images/logo-light.svg';
+import Flag1 from '../images/icons/flag1.png';
 import './styles/header.css';
-import TopHeader from './TopHeader';
 
 export default class Header extends Component {
   render() {
@@ -19,34 +19,38 @@ export default class Header extends Component {
               <li className="logo">
                 <img src={Logo} alt="world cc logo" />
               </li>
-              <li>
-                <a href="#">Entity type</a>
-                <FiChevronDown />
+            </ul>
+            <ul className="center_nav">
+              <li className="active">
+                <a href="#">Home</a>
+                <FiChevronDown id="nav_icon" />
               </li>
               <li>
-                <a href="#">Manage</a>
-                <FiChevronDown />
-              </li>
-              <li>
-                <a href="#">Learn</a>
-                <FiChevronDown />
+                <a href="#">Services</a>
+                <FiChevronDown className="nav_icon" />
               </li>
               <li>
                 <a href="#">About</a>
-                <FiChevronDown />
+                <FiChevronDown className="nav_icon" />
+              </li>
+              <li>
+                <a href="#">FAQ's</a>
+                <FiChevronDown className="nav_icon" />
+              </li>
+              <li>
+                <a href="#">Contact</a>
+                <FiChevronDown className="nav_icon" />
               </li>
             </ul>
             <ul className="right_nav">
               <li>
-                <a href="tel:+23445458573">
-                  <FiPhoneCall className="phone-icon" /> +23445458573
-                </a>
+                <a href="tel:+23445458573">Login</a>
               </li>
               <li>
                 <a href="#">Sign In</a>
               </li>
               <li>
-                <a href="#">Create Account</a>
+                <img src={Flag1} alt="" />
               </li>
             </ul>
           </nav>

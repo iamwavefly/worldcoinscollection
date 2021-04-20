@@ -1,72 +1,24 @@
 @media screen and (max-width: 600px){
   /* MAIN CONTENT */
+  .center_nav, .right_nav{
+    display: none !important;
+  }
+  .address_nav{
+    display: none !important;
+  }
+  .counter{
+    grid-gap: 20px;
+  }
+  .project_counter .project_counter_header{
+    margin-bottom: 20px;
+  }
+  h1{
+    line-height: 2.6rem;
+  }
   .main_bg{
-    height: 85vh;
+    padding-bottom: 2rem;
   }
-  .main_container{
-    position: relative;
-    top: 20px;
-  }
-  .main_container h1{
-    font-size: 30px !important;
-    line-height: 2rem !important;
-  }
-  .main_container p{
-    line-height: 1.2rem;
+  .btn_group button:last-child{
     margin-top: 10px;
-    font-size: 14px;
-  }
-  .right_section .banner{
-    top: 20px;
-  }
-  .background{
-    width: 90% ;
-    height: 90% ;
-  }
-  .pat1{
-    display: none;
-  }
-  .pat2{
-    width: 60px;
-    height: 60px;
-  }
-  .review_box{
-    width: 150px;
-    height: 150px;
-  }
-  .review_box2{
-    width: 150px;
-    height: 150px;
-  }
-  .review_box3{
-    width: 150px;
-    height: 150px;
-  }
-  /* OPTINS FORM */
-  .optins_form, .optins_intru{
-    display: none;
-  }
-  /* NOTICE BOARD */
-  .notice_board_container{
-    width: 100% !important;
-    padding: 6px 20px 6px 6px;
-    margin-left: unset;
-  background-color: rgba(252, 96, 117, 0.035);
-
-  }
-  .notice_board_container > .notice{
-    position: relative;
-    white-space: normal;
-    width: 100%;
-    padding-left: 10px;
-    line-height: 1.5rem;
-  
-  }
-  .notice_board_container > .notice > span{
-    left: 0;
-  }
-  /* SLEAK ICON */
-  .sleak_link_icons{
-    display: none;
   }
 }

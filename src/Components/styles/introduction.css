@@ -3,7 +3,7 @@
   height: 32rem;
   margin: 20px auto 0 auto;
   display: grid;
-  grid-template-rows: 20% 1fr;
+  grid-template-rows: 30% 1fr;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@
   padding-top: 20px;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 1fr;
   grid-gap: 40px;
 }

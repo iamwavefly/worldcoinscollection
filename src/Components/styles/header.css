@@ -1,7 +1,11 @@
 .header_container{
+  position: absolute;
+  top: 5%;
+  left: 0;
   width: 100%;
-  height: 6rem;
-  background-color: rgba(244, 232, 216, 0.4);
+  height: 8rem;
+  z-index: 999;
+  background-color: transparent !important;
 }
 .main_navbar{
   width: 85%;
@@ -19,7 +23,7 @@
 }
 .logo{
   padding-right: 20px;
-  width: 140px;
+  width: 180px;
   height: 80px;
 }
 .logo img{
@@ -30,47 +34,64 @@
 .main_navbar ul li{
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+.main_navbar ul.center_nav li > *{
+  transition: all 1s ease;
+  position: relative;
+  top: 0;
+  transition: all .4s ease;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 5px;
 }
 .main_navbar ul li > *{
   position: relative;
   top: 0;
   transition: all .4s ease;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
 }
-.main_navbar ul li:hover *{
-  color: rgba(232, 56, 59, 0.8);
+.nav_icon{
+  font-weight: bolder;
+}
+.main_navbar ul li.active{
+  border-bottom: 2px solid #fff;
+  top: -2px;
+}
+.main_navbar ul.center_nav li:hover{
+  border-bottom: 2px solid #fff;
   top: -2px;
 }
 .main_navbar ul li a{
-  color: #333;
   position: relative;
+  top: 0;
   border: unset;
-  font-weight: 700;
-  font-size: 14px;
 }
 .main_navbar .right_nav .phone-icon{
   position: relative;
   left: -2px;
   top: 2px;
 }
+.main_navbar .right_nav li:first-child{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #10cb6c;
+  padding: 5px 20px;
+  border-radius: 20px;
+  height: 35px;
+}
 .main_navbar .right_nav li:last-child{
-  /* background-color: rgba(252, 96, 117, 0.06); */
-  border: 1px solid #e8383b ;
-  padding: 12px 20px;
-  border-radius: 50px;
-  color: #e8383b;
+  background-color: #2f4a7e;
+  padding: 5px;
+  border-radius: 50%;
+  width: 35px !important;
+  height: 35px !important;
 }
-.main_navbar .right_nav li:last-child:hover{
-  background-image: linear-gradient(-20deg, #e8383b 0%, #FF763D 100%);
-  color: #fff !important; 
-  border: 1px solid transparent;
-}
-.main_navbar .right_nav li:last-child a{
-  top: unset;
-  color: inherit;
-  font-weight: 600;
-}
-img{
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+.main_navbar .right_nav li:last-child img{
+  width: 100%;
+  height: 100%;
 }

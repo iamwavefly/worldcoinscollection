@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 :root{
+  --primary-color: rgb(0, 85, 124);
   --header-color: #333; 
   --header-color-light: #444; 
+  --gradient-color: linear-gradient(to right, rgb(26, 180, 154), rgb(0, 85, 124))
 }
 body{
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
   height: auto;
   overflow-x: hidden;
+  font-size: 1.8rem;
 }
 ::-webkit-scrollbar{
   width: 10px;
@@ -34,10 +38,10 @@ li{
 }
 a{
   text-decoration: none;
-  color: rgba(232, 56, 59, 0.9);
-  font-weight: 500;
+  color: rgb(26, 180, 154);
+  font-weight: 400;
   font-size: 15px;
-  border-bottom: 1px dashed rgba(232, 56, 59, 0.9);
+  border-bottom: 1px dashed rgb(26, 180, 154);
   padding-bottom: 5px;
   width: max-content;
   padding: unset;
@@ -77,8 +81,14 @@ p{
   margin-bottom: 10px;
   background-clip: text;
   color: transparent;
-  background-image: linear-gradient(-20deg, #e8383b 0%, #FF763D 100%);
-
+  background-image: var(--gradient-color);
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.sub_header.light{
+  color: #fff ;
+  font-weight: 400;
 }
 mark{
   display: inline-block;

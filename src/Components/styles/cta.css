@@ -1,68 +1,72 @@
-.cta-bg{
-  background-color: rgba(182, 74, 89, 0.065);
-  width: 100%;
-  height: 35rem;
+.cta_bg{
   margin-top: 8rem;
-}
-.cta_container{
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
+  background-color: #20345f;
+  width: 100%;
+  height: auto;
+  min-height: 30rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40% 1fr;
 }
-.cta_container > .right_column{
+.cta_header{
+  width: 100%;
+  height: 65%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cta_header h2{
+  color: #fff;
+}
+.cta_content{
+  width: 80%;
+  height: 65%;
+  margin: 0 auto auto auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+.cta_content > div{
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.cta_container > .right_column img:first-child{
+.cta_content > div:not(:first-child)::before{
+  content: '';
   position: absolute;
-  right: -5%;
-  bottom: 10%;
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
+  border: 0.5px dashed rgba(255, 246, 246, 0.1);
+  width: 50%;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.calc_img{
+.cta_content > div span, h3{
+  color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.cta_content > div span{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.cta_content > div .dot{
+  position: relative;
+  border: 6px solid rgb(26, 180, 154);
+  border-radius: 50%;
+}
+.cta_content > div .dot::before{
   position: absolute;
-  left: -30%;
-  bottom: 5%;
-  height: 320px;
-  width: 320px;
-  object-fit: contain;
-  z-index: 999;
-}
-.calc_img2{
-  position: absolute;
-  right: 0%;
-  bottom: 40%;
-  height: 220px;
-  width: 220px;
-  object-fit: contain;
-  z-index: 999;
-}
-.cta_container > .right_column img:last-child{
-  position: absolute;
-  bottom: 0;
-  left: -5%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.cta_container > .left_column{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.cta_container > .left_column h2{
-  width: 80%;
-}
-.cta_container > .left_column p{
-  margin-top: 10px;
-  width: 75%;
-}
-.cta_container > .left_column a{
-  margin-top: 35px;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  content: '';
+  border: 3px solid rgb(26, 180, 154);
+  border-radius: 50%;
 }

@@ -1,44 +1,36 @@
 .sleak_link_icons{
-  display: grid;
-  grid-template-rows: repeat(3, 40px);
-  grid-template-columns: 1fr;
+  display: flex;
   justify-content: center;
   align-items: center;
-  grid-gap: 10px;
   width: 2rem;
-  position: absolute;
-  top: 30%;
-  left: -12%;
-  transform: translate(-50%,-50%);
+  margin-top: 2rem;
 }
 .sleak_link_icons > div{
   position: relative;
-  background-color: rgba(252, 96, 117, 0.065);
-  padding: 15px;
+  background-color: transparent;
+  border: 1px solid #73809d;
   border-radius: 5rem;
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
   transition: all .4s ease;
   cursor: pointer;
+  margin: 0 5px;
+  transform: all .6s ease;
+  color: #b1bed3;
+
 }
 .sleak_link_icons > div:hover{
-  opacity: .6;
-}
-.follow_us{
-  position: absolute;
-  bottom: -20%;
-  left: -30%;
-  white-space: nowrap;
-  transform: rotate(-90deg) translate(-50%, -50%);
-  font-weight: 500;
-  color: #555;
-  font-size: 14px;
+  background: #fff;
+  color: #333;
 }
 .sleak_link_icons > div > *{
-  font-size: 14px;
-  color: #FF763D;
+  font-size: 1.5rem;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  color: inherit;
 }

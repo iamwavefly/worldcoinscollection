@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ContactSection from './ContactSection';
 import CTA from './CTA';
 import FeatureSection from './FeatureSection';
-import Header from './Header';
+import TopHeader from './Header';
+import Header from './TopHeader';
 import InsightSection from './InsightSection';
 import Introduction from './Introduction';
 import Main from './Main';
@@ -18,6 +19,7 @@ export default class App extends Component {
     return (
       <div>
         {/* header section */}
+        <TopHeader />
         <Header />
         <Main />
         <Sponsors />
