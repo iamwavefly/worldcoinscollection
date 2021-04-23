@@ -1,11 +1,10 @@
 .footer_container{
   position: relative;
-  background-color: #444;
-  height: 14rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #292b30;
+  height: 15rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .footer_navbar{
   color: #f1f1f1;
@@ -18,6 +17,7 @@
   color: #f1f1f1 !important;
   font-weight: 400 !important;
   border: unset !important;
+  white-space: nowrap;
 }
 .footer_navbar ul li{
   color: #f1f1f1 !important;
@@ -38,7 +38,7 @@
   align-items: center;
   grid-gap: 10px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   width: 2rem;
   margin-bottom: 20px;
 }
@@ -48,8 +48,8 @@
   background-color: rgba(100, 100, 100, 0.048);
   padding: 15px;
   border-radius: 5rem;
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,8 +59,11 @@
 }
 .copyright{
   height: 4rem;
+  position: relative;
+  top: -10px;
 }
 .copyright span{
   color: #f1f1f1;
   font-weight: 500;
+  font-size: 15px;
 }

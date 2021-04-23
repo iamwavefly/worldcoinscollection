@@ -11,9 +11,18 @@
   width: 85%;
   height: 100%;
   margin: 0 auto;
-  display: flex;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   justify-content: space-between;
+  align-items: center;
+}
+.hamburger{
+  display:none;
+}
+.mobile_nav{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
   align-items: center;
 }
 .main_navbar ul{
@@ -80,9 +89,9 @@
   justify-content: center;
   align-content: center;
   background-color: #10cb6c;
-  padding: 5px 20px;
+  padding: 8px 20px;
   border-radius: 20px;
-  height: 35px;
+  /* height: 35px; */
 }
 .main_navbar .right_nav li:last-child{
   background-color: #2f4a7e;

@@ -3,13 +3,7 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import OptinsForm from './OptinsForm';
 // Images
-import pat1 from '../images/icons/pat1.svg';
-import pat2 from '../images/icons/pat2.svg';
-import review from '../images/icons/review.svg';
-import review2 from '../images/icons/review2.svg';
-import review3 from '../images/icons/review3.svg';
-import background from '../images/icons/bg.svg';
-import BanImg from '../images/banner.png';
+
 import './styles/main.css';
 import SleakSocialLinks from './SleakSocialLinks';
 import NoticeBoard from './NoticeBoard';
@@ -49,7 +43,7 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <div className="main_bg">
+      <div className="main_bg" id="banner_bg">
         <section className="main_container">
           <Fade up>
             <h1>Sell Old Coins, Notes & Antiques</h1>
@@ -59,35 +53,49 @@ export default class Main extends Component {
             <p>Current rate 1kg 1880 - 2000 = $200 * 4.5</p>
           </Fade>
           <div className="btn_group">
-            <button
-              onClick={() => {
-                this.handleCounter();
-              }}
-            >
-              Talk to Agent
-            </button>
-            <button>Contact Us</button>
+            <Fade up>
+              <button
+                onClick={() => {
+                  this.handleCounter();
+                }}
+              >
+                Talk to Agent
+              </button>
+            </Fade>
+            <Fade up delay={200}>
+              <button>Contact Us</button>
+            </Fade>
           </div>
           <SleakSocialLinks />
           <div className="project_counter">
-            <p className="project_counter_header">Realtime Statistics</p>
+            <Fade up>
+              <p className="project_counter_header">Realtime Statistics</p>
+            </Fade>
             <div className="counter">
-              <div className="frame1">
-                <h2>0022</h2>
-                <span>Projects</span>
-              </div>
-              <div className="frame2">
-                <h2>22</h2>
-                <span>Clients</span>
-              </div>
-              <div className="frame3">
-                <h2>$202k</h2>
-                <span>Crowdfund</span>
-              </div>
-              <div className="frame4">
-                <h2>{this.state.seller}</h2>
-                <span>Active Seller</span>
-              </div>
+              <Fade up>
+                <div className="frame1">
+                  <h2>0022</h2>
+                  <span>Projects</span>
+                </div>
+              </Fade>
+              <Fade up delay={600}>
+                <div className="frame2">
+                  <h2>22</h2>
+                  <span>Clients</span>
+                </div>
+              </Fade>
+              <Fade up delay={700}>
+                <div className="frame3">
+                  <h2>$202k</h2>
+                  <span>Crowdfund</span>
+                </div>
+              </Fade>
+              <Fade up delay={800}>
+                <div className="frame4">
+                  <h2>{this.state.seller}</h2>
+                  <span>Active Seller</span>
+                </div>
+              </Fade>
             </div>
           </div>
         </section>

@@ -7,9 +7,14 @@ export default class GoogleMapContainer extends Component {
   render() {
     const position = [29.815104, -95.511292];
     return (
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer
+        center={position}
+        zoom={13}
+        maxZoom={18}
+        scrollWheelZoom={false}
+      >
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         <Marker position={position}>

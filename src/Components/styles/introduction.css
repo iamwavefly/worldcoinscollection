@@ -1,7 +1,7 @@
 .introd_container{
   width: 85%;
-  height: 32rem;
-  margin: 20px auto 0 auto;
+  height: 36rem;
+  margin: -5px auto 0 auto;
   display: grid;
   grid-template-rows: 30% 1fr;
   flex-direction: column;
@@ -10,16 +10,14 @@
 }
 .introd_header{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   text-align: center;
+  margin-top: 20px;
 }
 
 .introd_header h2{
   position: relative;
-  /* top: 15px; */
   width: 50%;
 }
 .introd_header p{
@@ -27,15 +25,15 @@
   width: 50%;
 }
 .introd_content{
-  width: 90%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: -40px auto 0 auto;
   padding-top: 20px;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: 1fr;
-  grid-gap: 40px;
+  grid-gap: 20px;
 }
 /* .underline{
   width: 20%;
@@ -59,10 +57,24 @@
 } */
 .introd_content > div{
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   transition: all .2s ease;
   border: 1px solid #eee;
-  padding: 20px;
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introd_content .icon_wrap{
+  width: 80px;
+  height: 80px;
+}
+.introd_content .icon_wrap img{
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover;
 }
 .introd_content > div:hover{
   border: 1px solid #eee;
@@ -75,8 +87,9 @@
 }
 .introd_content h3{
   margin-top: 20px;
+  color: #555;
 }
 .introd_content a{
   position: relative;
-  top: 20px;
+  top: 40px;
 }

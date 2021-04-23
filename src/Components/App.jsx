@@ -13,6 +13,8 @@ import Footer from './Footer';
 import GoogleMapContainer from './googleApis/GoogleMap';
 
 import './styles/Mobile/index.css';
+import MapSection from './MapSection';
+import Team from './Team';
 
 export default class App extends Component {
   render() {
@@ -28,8 +30,10 @@ export default class App extends Component {
         <FeatureSection />
         <CTA />
         <Testimonies />
-        <ContactSection />
         <GoogleMapContainer />
+        {/* <MapSection /> */}
+        {/* <Team /> */}
+        {/* <ContactSection /> */}
         <Footer />
       </div>
     );

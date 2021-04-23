@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 
-import img1 from '../images/icons/establishment.png';
-import img2 from '../images/icons/history.png';
-import img3 from '../images/icons/numismatic.png';
+import img1 from '../images/icons/history.svg';
+import img2 from '../images/icons/establishment.svg';
+import img3 from '../images/icons/numismatic.svg';
 
 import './styles/introduction.css';
 
@@ -26,11 +26,13 @@ export default class Introduction extends Component {
         <div className="introd_content">
           <Fade up>
             <div className="content1">
-              <img
-                src={img1}
-                alt="establishment img"
-                className="content_icon"
-              />
+              <div className="icon_wrap">
+                <img
+                  src={img1}
+                  alt="establishment img"
+                  className="content_icon"
+                />
+              </div>
               <h3 className="content_title">Our History</h3>
               <p>
                 As is the case with many numismatic firms, the history of the
@@ -43,7 +45,13 @@ export default class Introduction extends Component {
           </Fade>
           <Fade up delay={500}>
             <div className="content2">
-              <img src={img2} alt="history img" className="content_icon" />
+              <div className="icon_wrap">
+                <img
+                  src={img2}
+                  alt="establishment img"
+                  className="content_icon"
+                />
+              </div>
               <h3 className="content_title">Establishment</h3>
               <p>
                 Hilbert was honorably discharged from the military in October
@@ -57,7 +65,13 @@ export default class Introduction extends Component {
           </Fade>
           <Fade up delay={700}>
             <div className="content3">
-              <img src={img3} alt="numismatic img" className="content_icon" />
+              <div className="icon_wrap">
+                <img
+                  src={img3}
+                  alt="establishment img"
+                  className="content_icon"
+                />
+              </div>
               <h3 className="content_title">Numismatic</h3>
               <p>
                 By 1954 the Asia Old Stamp Company had grown to an operation of

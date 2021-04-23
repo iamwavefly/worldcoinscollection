@@ -1,0 +1,30 @@
+.teamContainer{
+  height: auto;
+  min-height: 40rem;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 30% 1fr;
+}
+.teamHeader{
+  display: grid;
+  place-items: center;
+}
+.teamContent{
+  width: 85%;
+  height: 80%;
+  margin: 0 auto auto auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.teamContent > div{
+  border: 1px solid rgba(0, 29, 20, 0.1);
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 20% 10% 1fr 10%;
+}
+.teamContent .teamAvatar{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
